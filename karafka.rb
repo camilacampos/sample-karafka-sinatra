@@ -11,7 +11,7 @@ Karafka::Loader.load(Karafka::App.root)
 
 class KarafkaApp < Karafka::App
   setup do |config|
-    config.kafka.seed_brokers = %w[kafka://127.0.0.1:9092]
+    config.kafka.seed_brokers = %w[kafka://172.17.0.3:9092]
     config.client_id = 'example_app'
     config.backend = :inline
     config.batch_fetching = true
