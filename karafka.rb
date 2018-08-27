@@ -25,7 +25,7 @@ class KarafkaApp < Karafka::App
   Karafka.monitor.subscribe(Karafka::Instrumentation::Listener)
 
   consumer_groups.draw do
-    consumer_group :ola do
+    consumer_group :default_group do
       topic :example do
         consumer ::Consumers::Example
         responder ::Responders::Example
